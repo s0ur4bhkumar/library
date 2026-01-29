@@ -1,48 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header>
-        <h1>LIBRARY</h1>
-        <button class="showButton">New book</button>
-    </header>
-    <div class="container"></div>
-    <dialog class="dialogBox">
-        <form autocomplete="off" style="width: 50vh;">
-            <div style="width: 60%;">
-                <label for="Title" style="display: block;">Title</label>
-                <input type="text" name="Title" id="Title" value="" style="height: 2em; width: 100%">
-            </div>
-            <div style="width: 60%;">
-                <label for="Author" style="display: block;">Author</label>
-                <input type="text" name="Author" id="Author" value="" style="height: 2em; width: 100%">
-            </div>
-            <div style="width: 60%;">
-                <label for="Pages" style="display: block;">Pages</label>
-                <input type="number" name="Pages" id="Pages" value="" style="height: 2em; width: 100%">
-            </div>
-            <div style="width: 60%;">
-                <label for="Status" style="display: block;">Status</label>
-                <input type="text" name="Status" id="Status" value="" style="height: 2em; width: 100%">
-            </div>
-            <div style="width: 60%;">
-                <label for="Info" style="display: block;">Info</label>
-                <input type="text" name="Info" id="Info" value="" style="height: 2em; width: 100%">
-            </div>
-            <div class="buttons" style="width: 60%;">
-                <button formmethod="dialog" id="cancel">Cancel</button>
-                <button id="confirmBtn" value="default">Confirm</button>
-            </div>
-        </form>
-    </dialog>
-</body>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Library</h1>
+            <button class="new">New Book</button>
+        </header>
+        <div class="container"></div>
+        <dialog class="info-form">
+            <form>
+                <div>
+                    <label for="Title">Title:</label>
+                    <input type="text" id="Title" name="Title" required />
+                </div>
+                <div>
+                    <label for="Author">Author:</label>
+                    <input type="text" id="Author" name="Author" required />
+                </div>
+                <div>
+                    <label for="Pages">Pages:</label>
+                    <input type="number" id="Pages" name="pages" required />
+                </div>
+                <div>
+                    <label for="Status">Status:</label>
+                    <input type="text" id="Status" name="Status" required />
+                </div>
+                <button formmethod="dialog" class="cancel" value="cancel">
+                    cancel
+                </button>
+                <button class="submit" type="submit" value="default">
+                    submit
+                </button>
+            </form>
+        </dialog>
+    </body>
 </html>
